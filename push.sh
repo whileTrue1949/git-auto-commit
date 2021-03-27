@@ -5,7 +5,7 @@ function rand(){
     echo $(($num%$max+$min))
 }
 rnd=$(rand 2 10)
-for i in $(seq 1 rnd)
+for i in $(seq 1 $rnd)
 do
     git pull && /usr/local/bin/node add.js && git commit -a -m 'git auto commit' && git push origin master
 done
